@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>ychezu</title>
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+  <link rel="stylesheet" type="text/css" href="../common/css/public.css">
+  <link rel="stylesheet" type="text/css" href="css/base.css">
+</head>
+<body style="background: #fff">
+<!--  header start-->
+<header class="header fixed">
+  <dl class="container">
+    <dt class="header-left">
+      <a class="aItem" href="javascript:history.go(-1);">
+        <i class="fi icon-jiantou_left"></i>
+      </a>
+    </dt>
+    <dd class="header-middle">
+      <h1 class="pageTitle">易车族您贷</h1>
+    </dd>
+    <dd class="header-right">
+      <a class="aItem" href="../search-c/pro-search.html">
+        <i class="fi fi-zoom"></i>
+      </a>
+    </dd>
+  </dl>
+</header>
+<!--  header start-->
+<!--  recommend-wrapper start-->
+<div class="recommend-wrapper">
+  <h3 class="title">已为您匹配到最适合您的<i>极速审批、低利率</i>金融产品</h3>
+  <div class="pro-groups">
+    <div class="pro-info">
+      <div class="img-box">
+        <img src="images/brank.jpg"/>
+      </div>
+      <div class="item-right">
+        <div class="brank">极速一贷</div>
+        <div class="apply-price">申请信息：<span class="general">一般</span></div>
+        <div class="apply-evaluation">暂无评价</div>
+        <div class="apply-tag">
+          <span class="tag-one">最快当天放款</span>
+          <span class="tag-two">申请仅需身份证</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="topguide">
+  <p>立即申请该金融产品，贷款顾问将会尽快联系您</p>
+</div>
+<!--  recommend-wrapper end-->
+<!--  login-form start-->
+<div class="login-form">
+  <div class="form-item">
+    <div class="info">
+      <span class="fi-icon"><i class="fi icon-xingming"></i></span>
+      <span class="title">姓名</span>
+      <span class="uf-info">
+        <input type="text" name="Name" id="Name" placeholder="请输入您的真实姓名"/>
+      </span>
+      <div class="warning" id="errorUser">请输入真实的姓名</div>
+    </div>
+    <div class="info">
+      <span class="fi-icon"><i class="fi icon-shoujihao"></i></span>
+      <span class="title">手机号</span>
+      <span class="uf-info">
+        <input type="tel" name="Name" id="Telphone" placeholder="请输入手机号码" maxlength="11"/>
+      </span>
+      <div class="warning" id="errTel">手机号错误</div>
+    </div>
+    <div class="info">
+      <span class="fi-icon"><i class="fi icon-yanzhengma"></i></span>
+      <span class="title">验证码</span>
+      <span class="uf-info">
+        <input type="tel" class="input-right" name="Name" id="TelphoneValidata" placeholder="请输入验证码" maxlength="4"/>
+      </span>
+      <span class="send-code">
+       <input type="button" id="btn-get-code" value="获取验证码" class="btn-get-code"/>
+      </span>
+
+      <div class="warning">验证码错误</div>
+    </div>
+    <div class="form-btn-wrappe">
+      <a href="success.html" id="submitBtn" class="btn-main">立即申请</a>
+    </div>
+  </div>
+</div>
+<!--  login-form end-->
+</body>
+</html>
+<script type="text/javascript" language="javascript" src="../common/js/jquery-1.7.2.min.js"></script>
+<!--<script type="text/javascript" language="javascript" src="js/zepto.js"></script>-->
+<script>
+    $(function () {
+        //点击发送
+        var countdown = 60;
+        function sendemail() {
+            var obj = $("#btn-get-code");
+            settime(obj);
+        }
+        function settime(obj) { //发送验证码倒计时
+            if (countdown == 0) {
+                obj.attr('disabled', false);
+                //obj.removeattr("disabled");
+                obj.val("免费获取验证码");
+                obj.removeClass('on');
+                countdown = 60;
+                return;
+            } else {
+                obj.attr('disabled', true);
+                obj.val("(" + countdown + ")秒后获取");
+                obj.addClass('on');
+                countdown--;
+            }
+            setTimeout(function () {
+                    settime(obj)
+                }
+                , 1000)
+        }
+        $('#btn-get-code').on('click', function () {
+            sendemail();
+        });
+    });
+    $(function () {
+        //表单验证
+        //返回字符串长度
+        function getValueLength(str) {
+            return str.replace(/[^\x00-\xff]/g, "xx").length;
+        }
+        function userValidata() {
+            var username = $('#Name').val();
+            if (username == ' ' || getValueLength(username) < 4) {
+                $('#errorUser').addClass('on');
+            } else {
+                $('#errorUser').removeClass('on');
+            }
+        }
+        //验证用户名
+        $('#Telphone').on('click', function () {
+            userValidata();
+        });
+        //验证手机号
+        $('#TelphoneValidata').on('click', function () {
+            userValidata();
+            var tel = $('#Telphone').val();
+            var myreg = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1}))+\d{8})$/;
+            if (!myreg.test(tel)) {
+                $('#errTel').addClass('on');
+            } else {
+                $('#errTel').removeClass('on');
+            }
+        });
+    })
+</script>
+
+
+
+
+
+
+
+
+
+

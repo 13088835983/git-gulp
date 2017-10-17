@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>ychezu</title>
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+  <link rel="stylesheet" type="text/css" href="../common/css/public.css">
+  <link rel="stylesheet" type="text/css" href="css/base.css">
+  <link rel="stylesheet" type="text/css" href="css/city.css">
+</head>
+<body>
+<!--  header start-->
+<header class="header fixed">
+  <dl class="container">
+    <dt class="header-left">
+      <a class="aItem" href="javascript:history.go(-1);">
+        <i class="fi icon-jiantou_left"></i>
+      </a>
+    </dt>
+    <dd class="header-middle">
+      <h1 class="pageTitle">易车族帮您贷</h1>
+    </dd>
+    <dd class="header-right">
+      <a class="aItem" href="../search-c/pro-search.html">
+        <i class="fi fi-zoom"></i>
+      </a>
+    </dd>
+  </dl>
+</header>
+<!--  header start-->
+
+<!--chattingWrap start-->
+<div class="chattingWrap" id="chattingWrap">
+  <div class="chattingInner">
+    <!-- message-dig-->
+    <div class="message-dig">
+      <div class="icon-img">
+        <img src="images/ycz_logo.png" class="img"/>
+      </div>
+      <div class="message-prop">终于等到您，您心仪的车是哪款？您准备在哪儿购买呢？</div>
+    </div>
+    <!--message-response-->
+    <div class="message-response on" id="buy-car-info">
+      <div class="icon-img">
+        <img src="images/user.png" class="img"/>
+      </div>
+      <div class="message-prop">
+        <div class="car-img">
+          <img src="images/car_01.jpg"/>
+        </div>
+        <div class="car-info" >
+          <div class="car-name" id="carPropName">哈弗H6 经典版 1.5T 手动 四驱 超值型</div>
+          <div class="car-city">购车城市：<span id="buyCarCity">深圳</span></div>
+        </div>
+      </div>
+    </div>
+    <!-- message-dig-->
+    <div class="message-dig on" id="buy-message">
+      <div class="icon-img">
+        <img src="images/ycz_logo.png" class="img"/>
+      </div>
+      <div class="message-prop">补充以下信息，我们会为您匹配最适合的金融产品</div>
+    </div>
+  </div>
+</div>
+<!--chattingWrap end-->
+<!--chattingWrap start-->
+<!--selectCarBrands start-->
+<div class="selectCarBrands">
+  <div class="selectCar transition">
+    <!--  header start-->
+    <header class="header fixed">
+      <dl class="container">
+        <dt class="header-left">
+          <a class="aItem" href="javascript:;">
+            <i class="fi icon-jiantou_left" onclick="$('.selectCarBrands').removeClass('on')"></i>
+          </a>
+        </dt>
+        <dd class="header-middle">
+          <h1 class="pageTitle">选择品牌</h1>
+        </dd>
+        <dd class="header-right">
+          <a class="aItem" href="../search-c/pro-search.html">
+            <i class="fi fi-zoom"></i>
+          </a>
+        </dd>
+      </dl>
+    </header>
+    <!--  header start-->
+    <!--recomm-brand start-->
+    <div class="recomm-brand">
+      <h3 class="recomm-title">推荐品牌</h3>
+      <ul class="items">
+        <li class="item">
+          <span class="c-img"><img src="images/car_barnd.png"/></span>
+          <span class="c-info">现代</span>
+        </li>
+        <li class="item">
+          <span class="c-img"><img src="images/car_barnd.png"/></span>
+          <span class="c-info">现代</span>
+        </li>
+        <li class="item">
+          <span class="c-img"><img src="images/car_barnd.png"/></span>
+          <span class="c-info">现代</span>
+        </li>
+        <li class="item">
+          <span class="c-img"><img src="images/car_barnd.png"/></span>
+          <span class="c-info">现代</span>
+        </li>
+        <li class="item">
+          <span class="c-img"><img src="images/bei_brand.png"/></span>
+          <span class="c-info">本田</span>
+        </li>
+        <li class="item">
+          <span class="c-img"><img src="images/bei_brand.png"/></span>
+          <span class="c-info">本田</span>
+        </li>
+        <li class="item">
+          <span class="c-img"><img src="images/bei_brand.png"/></span>
+          <span class="c-info">本田</span>
+        </li>
+        <li class="item">
+          <span class="c-img"><img src="images/bei_brand.png"/></span>
+          <span class="c-info">本田</span>
+        </li>
+      </ul>
+    </div>
+    <!--recomm-brand end-->
+    <!--selling-cars start-->
+    <div class="selling-cars">
+      <h3 class="selling-title">热卖车型</h3>
+      <ul class="items">
+        <li class="item">
+          <span class="c-img"><img src="images/car_01.jpg"/></span>
+          <span class="c-info">现代</span>
+        </li>
+        <li class="item">
+          <span class="c-img"><img src="images/car_11.jpg"/></span>
+          <span class="c-info">现代</span>
+        </li>
+        <li class="item">
+          <span class="c-img"><img src="images/car_01.jpg"/></span>
+          <span class="c-info">现代</span>
+        </li>
+        <li class="item">
+          <span class="c-img"><img src="images/car_11.jpg"/></span>
+          <span class="c-info">现代</span>
+        </li>
+        <li class="item">
+          <span class="c-img"><img src="images/car_01.jpg"/></span>
+          <span class="c-info">本田</span>
+        </li>
+        <li class="item">
+          <span class="c-img"><img src="images/car_11.jpg"/></span>
+          <span class="c-info">本田</span>
+        </li>
+      </ul>
+    </div>
+    <!--selling-cars end-->
+    <!--显示点击的是哪一个字母-->
+    <div id="showLetter" class="showLetter" style="display: none;"><span>R</span></div>
+    <!--城市索引查询-->
+    <div class="letter">
+      <ul>
+        <li><a href="#A11">荐</a></li>
+        <li><a href="#A11">热</a></li>
+        <li><a href="#A11">A</a></li>
+        <li><a href="#B11">B</a></li>
+        <li><a href="#C11">C</a></li>
+        <li><a href="#D11">D</a></li>
+        <li><a href="#E11">E</a></li>
+        <li><a href="#F11">F</a></li>
+        <li><a href="#G11">G</a></li>
+        <li><a href="#H11">H</a></li>
+        <li><a href="#J11">J</a></li>
+        <li><a href="#K11">K</a></li>
+        <li><a href="#L11">L</a></li>
+        <li><a href="#M11">M</a></li>
+        <li><a href="#N11">N</a></li>
+        <li><a href="#P11">P</a></li>
+        <li><a href="#Q11">Q</a></li>
+        <li><a href="#R11">R</a></li>
+        <li><a href="#S11">S</a></li>
+        <li><a href="#T11">T</a></li>
+        <li><a href="#W11">W</a></li>
+        <li><a href="#X11">X</a></li>
+        <li><a href="#Y11">Y</a></li>
+        <li><a href="#Z11">Z</a></li>
+      </ul>
+    </div>
+    <!--城市列表-->
+    <div class="container">
+      <div class="Car">
+        <div class="Car-list"><span class="city-letter" id="A11">A</span>
+          <p><img src="images/car_brands.png" class="car-img"/><span class="car-name">吉利</span></p>
+          <p><img src="images/jac.png" class="car-img"/><span class="car-name">江铃</span></p>
+          <p><img src="images/jeep.png" class="car-img"/><span class="car-name">吉普</span></p>
+          <p><img src="images/chang.png" class="car-img"/><span class="car-name">长安</span></p>
+          <p><img src="images/car_brands.png" class="car-img"/><span class="car-name">吉利</span></p>
+          <p><img src="images/jac.png" class="car-img"/><span class="car-name">江铃</span></p>
+          <p><img src="images/jeep.png" class="car-img"/><span class="car-name">吉普</span></p>
+          <p><img src="images/chang.png" class="car-img"/><span class="car-name">长安</span></p>
+        </div>
+        <div class="Car-list"><span class="city-letter" id="B11">B</span>
+          <p><img src="images/car_brands.png" class="car-img"/><span class="car-name">吉利</span></p>
+          <p><img src="images/jac.png" class="car-img"/><span class="car-name">江铃</span></p>
+          <p><img src="images/jeep.png" class="car-img"/><span class="car-name">吉普</span></p>
+          <p><img src="images/chang.png" class="car-img"/><span class="car-name">长安</span></p>
+          <p><img src="images/car_brands.png" class="car-img"/><span class="car-name">吉利</span></p>
+          <p><img src="images/jac.png" class="car-img"/><span class="car-name">江铃</span></p>
+          <p><img src="images/jeep.png" class="car-img"/><span class="car-name">吉普</span></p>
+          <p><img src="images/chang.png" class="car-img"/><span class="car-name">长安</span></p>
+        </div>
+        <div class="Car-list"><span class="city-letter" id="C11">C</span>
+          <p><img src="images/car_brands.png" class="car-img"/><span class="car-name">吉利</span></p>
+          <p><img src="images/jac.png" class="car-img"/><span class="car-name">江铃</span></p>
+          <p><img src="images/jeep.png" class="car-img"/><span class="car-name">吉普</span></p>
+          <p><img src="images/chang.png" class="car-img"/><span class="car-name">长安</span></p>
+          <p><img src="images/car_brands.png" class="car-img"/><span class="car-name">吉利</span></p>
+          <p><img src="images/jac.png" class="car-img"/><span class="car-name">江铃</span></p>
+          <p><img src="images/jeep.png" class="car-img"/><span class="car-name">吉普</span></p>
+          <p><img src="images/chang.png" class="car-img"/><span class="car-name">长安</span></p>
+        </div>
+        <div class="Car-list"><span class="city-letter" id="D11">D</span>
+          <p><img src="images/car_brands.png" class="car-img"/><span class="car-name">吉利</span></p>
+          <p><img src="images/jac.png" class="car-img"/><span class="car-name">江铃</span></p>
+          <p><img src="images/jeep.png" class="car-img"/><span class="car-name">吉普</span></p>
+          <p><img src="images/chang.png" class="car-img"/><span class="car-name">长安</span></p>
+          <p><img src="images/car_brands.png" class="car-img"/><span class="car-name">吉利</span></p>
+          <p><img src="images/jac.png" class="car-img"/><span class="car-name">江铃</span></p>
+          <p><img src="images/jeep.png" class="car-img"/><span class="car-name">吉普</span></p>
+          <p><img src="images/chang.png" class="car-img"/><span class="car-name">长安</span></p>
+        </div>
+        <div class="Car-list"><span class="city-letter" id="E11">E</span>
+          <p><img src="images/car_brands.png" class="car-img"/><span class="car-name">吉利</span></p>
+          <p><img src="images/jac.png" class="car-img"/><span class="car-name">江铃</span></p>
+          <p><img src="images/jeep.png" class="car-img"/><span class="car-name">吉普</span></p>
+          <p><img src="images/chang.png" class="car-img"/><span class="car-name">长安</span></p>
+          <p><img src="images/car_brands.png" class="car-img"/><span class="car-name">吉利</span></p>
+          <p><img src="images/jac.png" class="car-img"/><span class="car-name">江铃</span></p>
+          <p><img src="images/jeep.png" class="car-img"/><span class="car-name">吉普</span></p>
+          <p><img src="images/chang.png" class="car-img"/><span class="car-name">长安</span></p>
+        </div>
+        <div class="Car-list"><span class="city-letter" id="F11">F</span>
+          <p><img src="images/car_brands.png" class="car-img"/><span class="car-name">吉利</span></p>
+          <p><img src="images/jac.png" class="car-img"/><span class="car-name">江铃</span></p>
+          <p><img src="images/jeep.png" class="car-img"/><span class="car-name">吉普</span></p>
+          <p><img src="images/chang.png" class="car-img"/><span class="car-name">长安</span></p>
+          <p><img src="images/car_brands.png" class="car-img"/><span class="car-name">吉利</span></p>
+          <p><img src="images/jac.png" class="car-img"/><span class="car-name">江铃</span></p>
+          <p><img src="images/jeep.png" class="car-img"/><span class="car-name">吉普</span></p>
+          <p><img src="images/chang.png" class="car-img"/><span class="car-name">长安</span></p>
+        </div>
+        <div class="Car-list"><span class="city-letter" id="G11">G</span>
+          <p><img src="images/car_brands.png" class="car-img"/><span class="car-name">吉利</span></p>
+          <p><img src="images/jac.png" class="car-img"/><span class="car-name">江铃</span></p>
+          <p><img src="images/jeep.png" class="car-img"/><span class="car-name">吉普</span></p>
+          <p><img src="images/chang.png" class="car-img"/><span class="car-name">长安</span></p>
+          <p><img src="images/car_brands.png" class="car-img"/><span class="car-name">吉利</span></p>
+          <p><img src="images/jac.png" class="car-img"/><span class="car-name">江铃</span></p>
+          <p><img src="images/jeep.png" class="car-img"/><span class="car-name">吉普</span></p>
+          <p><img src="images/chang.png" class="car-img"/><span class="car-name">长安</span></p>
+        </div>
+        <div class="Car-list"><span class="city-letter" id="H11">H</span>
+          <p><img src="images/car_brands.png" class="car-img"/><span class="car-name">吉利</span></p>
+          <p><img src="images/jac.png" class="car-img"/><span class="car-name">江铃</span></p>
+          <p><img src="images/jeep.png" class="car-img"/><span class="car-name">吉普</span></p>
+          <p><img src="images/chang.png" class="car-img"/><span class="car-name">长安</span></p>
+          <p><img src="images/car_brands.png" class="car-img"/><span class="car-name">吉利</span></p>
+          <p><img src="images/jac.png" class="car-img"/><span class="car-name">江铃</span></p>
+          <p><img src="images/jeep.png" class="car-img"/><span class="car-name">吉普</span></p>
+          <p><img src="images/chang.png" class="car-img"/><span class="car-name">长安</span></p>
+        </div>
+        <div class="Car-list"><span class="city-letter" id="J11">J</span>
+          <p><img src="images/car_brands.png" class="car-img"/><span class="car-name">吉利</span></p>
+          <p><img src="images/jac.png" class="car-img"/><span class="car-name">江铃</span></p>
+          <p><img src="images/jeep.png" class="car-img"/><span class="car-name">吉普</span></p>
+          <p><img src="images/chang.png" class="car-img"/><span class="car-name">长安</span></p>
+          <p><img src="images/car_brands.png" class="car-img"/><span class="car-name">吉利</span></p>
+          <p><img src="images/jac.png" class="car-img"/><span class="car-name">江铃</span></p>
+          <p><img src="images/jeep.png" class="car-img"/><span class="car-name">吉普</span></p>
+          <p><img src="images/chang.png" class="car-img"/><span class="car-name">长安</span></p>
+        </div>
+        <div class="Car-list"><span class="city-letter" id="K11">K</span>
+          <p><img src="images/car_brands.png" class="car-img"/><span class="car-name">吉利</span></p>
+          <p><img src="images/jac.png" class="car-img"/><span class="car-name">江铃</span></p>
+          <p><img src="images/jeep.png" class="car-img"/><span class="car-name">吉普</span></p>
+          <p><img src="images/chang.png" class="car-img"/><span class="car-name">长安</span></p>
+          <p><img src="images/car_brands.png" class="car-img"/><span class="car-name">吉利</span></p>
+          <p><img src="images/jac.png" class="car-img"/><span class="car-name">江铃</span></p>
+          <p><img src="images/jeep.png" class="car-img"/><span class="car-name">吉普</span></p>
+          <p><img src="images/chang.png" class="car-img"/><span class="car-name">长安</span></p>
+        </div>
+        <div class="Car-list"><span class="city-letter" id="L11">L</span>
+          <p><img src="images/car_brands.png" class="car-img"/><span class="car-name">吉利</span></p>
+          <p><img src="images/jac.png" class="car-img"/><span class="car-name">江铃</span></p>
+          <p><img src="images/jeep.png" class="car-img"/><span class="car-name">吉普</span></p>
+          <p><img src="images/chang.png" class="car-img"/><span class="car-name">长安</span></p>
+          <p><img src="images/car_brands.png" class="car-img"/><span class="car-name">吉利</span></p>
+          <p><img src="images/jac.png" class="car-img"/><span class="car-name">江铃</span></p>
+          <p><img src="images/jeep.png" class="car-img"/><span class="car-name">吉普</span></p>
+          <p><img src="images/chang.png" class="car-img"/><span class="car-name">长安</span></p>
+        </div>
+        <div class="Car-list"><span class="city-letter" id="M11">M</span>
+          <p><img src="images/car_brands.png" class="car-img"/><span class="car-name">吉利</span></p>
+          <p><img src="images/jac.png" class="car-img"/><span class="car-name">江铃</span></p>
+          <p><img src="images/jeep.png" class="car-img"/><span class="car-name">吉普</span></p>
+          <p><img src="images/chang.png" class="car-img"/><span class="car-name">长安</span></p>
+          <p><img src="images/car_brands.png" class="car-img"/><span class="car-name">吉利</span></p>
+          <p><img src="images/jac.png" class="car-img"/><span class="car-name">江铃</span></p>
+          <p><img src="images/jeep.png" class="car-img"/><span class="car-name">吉普</span></p>
+          <p><img src="images/chang.png" class="car-img"/><span class="car-name">长安</span></p>
+        </div>
+        <div class="Car-list"><span class="city-letter" id="N11">N</span>
+          <p><img src="images/car_brands.png" class="car-img"/><span class="car-name">吉利</span></p>
+          <p><img src="images/jac.png" class="car-img"/><span class="car-name">江铃</span></p>
+          <p><img src="images/jeep.png" class="car-img"/><span class="car-name">吉普</span></p>
+          <p><img src="images/chang.png" class="car-img"/><span class="car-name">长安</span></p>
+          <p><img src="images/car_brands.png" class="car-img"/><span class="car-name">吉利</span></p>
+          <p><img src="images/jac.png" class="car-img"/><span class="car-name">江铃</span></p>
+          <p><img src="images/jeep.png" class="car-img"/><span class="car-name">吉普</span></p>
+          <p><img src="images/chang.png" class="car-img"/><span class="car-name">长安</span></p>
+        </div>
+        <div class="Car-list"><span class="city-letter" id="P11">P</span>
+          <p><img src="images/car_brands.png" class="car-img"/><span class="car-name">吉利</span></p>
+          <p><img src="images/jac.png" class="car-img"/><span class="car-name">江铃</span></p>
+          <p><img src="images/jeep.png" class="car-img"/><span class="car-name">吉普</span></p>
+          <p><img src="images/chang.png" class="car-img"/><span class="car-name">长安</span></p>
+          <p><img src="images/car_brands.png" class="car-img"/><span class="car-name">吉利</span></p>
+          <p><img src="images/jac.png" class="car-img"/><span class="car-name">江铃</span></p>
+          <p><img src="images/jeep.png" class="car-img"/><span class="car-name">吉普</span></p>
+          <p><img src="images/chang.png" class="car-img"/><span class="car-name">长安</span></p>
+        </div>
+        <div class="Car-list"><span class="city-letter" id="Q11">Q</span>
+          <p><img src="images/chang.png" class="car-img"/><span class="car-name">长安</span></p>
+          <p><img src="images/car_brands.png" class="car-img"/><span class="car-name">吉利</span></p>
+          <p><img src="images/jac.png" class="car-img"/><span class="car-name">江铃</span></p>
+          <p><img src="images/jeep.png" class="car-img"/><span class="car-name">吉普</span></p>
+          <p><img src="images/chang.png" class="car-img"/><span class="car-name">长安</span></p>
+        </div>
+        <div class="Car-list"><span class="city-letter" id="R11">R</span>
+          <p><img src="images/chang.png" class="car-img"/><span class="car-name">长安</span></p>
+          <p><img src="images/car_brands.png" class="car-img"/><span class="car-name">吉利</span></p>
+          <p><img src="images/jac.png" class="car-img"/><span class="car-name">江铃</span></p>
+          <p><img src="images/jeep.png" class="car-img"/><span class="car-name">吉普</span></p>
+          <p><img src="images/chang.png" class="car-img"/><span class="car-name">长安</span></p>
+        </div>
+        <div class="Car-list"><span class="city-letter" id="S11">S</span>
+          <p><img src="images/chang.png" class="car-img"/><span class="car-name">长安</span></p>
+          <p><img src="images/car_brands.png" class="car-img"/><span class="car-name">吉利</span></p>
+          <p><img src="images/jac.png" class="car-img"/><span class="car-name">江铃</span></p>
+          <p><img src="images/jeep.png" class="car-img"/><span class="car-name">吉普</span></p>
+          <p><img src="images/chang.png" class="car-img"/><span class="car-name">长安</span></p>
+        </div>
+        <div class="Car-list"><span class="city-letter" id="T11">T</span>
+          <p><img src="images/chang.png" class="car-img"/><span class="car-name">长安</span></p>
+          <p><img src="images/car_brands.png" class="car-img"/><span class="car-name">吉利</span></p>
+          <p><img src="images/jac.png" class="car-img"/><span class="car-name">江铃</span></p>
+          <p><img src="images/jeep.png" class="car-img"/><span class="car-name">吉普</span></p>
+          <p><img src="images/chang.png" class="car-img"/><span class="car-name">长安</span></p>
+        </div>
+        <div class="Car-list"><span class="city-letter" id="W11">W</span>
+          <p><img src="images/chang.png" class="car-img"/><span class="car-name">长安</span></p>
+          <p><img src="images/car_brands.png" class="car-img"/><span class="car-name">吉利</span></p>
+          <p><img src="images/jac.png" class="car-img"/><span class="car-name">江铃</span></p>
+          <p><img src="images/jeep.png" class="car-img"/><span class="car-name">吉普</span></p>
+          <p><img src="images/chang.png" class="car-img"/><span class="car-name">长安</span></p>
+        </div>
+        <div class="Car-list"><span class="city-letter" id="X11">X</span>
+          <p><img src="images/chang.png" class="car-img"/><span class="car-name">长安</span></p>
+          <p><img src="images/car_brands.png" class="car-img"/><span class="car-name">吉利</span></p>
+          <p><img src="images/jac.png" class="car-img"/><span class="car-name">江铃</span></p>
+          <p><img src="images/jeep.png" class="car-img"/><span class="car-name">吉普</span></p>
+          <p><img src="images/chang.png" class="car-img"/><span class="car-name">长安</span></p>
+        </div>
+        <div class="Car-list"><span class="city-letter" id="Y11">Y</span>
+          <p><img src="images/chang.png" class="car-img"/><span class="car-name">长安</span></p>
+          <p><img src="images/car_brands.png" class="car-img"/><span class="car-name">吉利</span></p>
+          <p><img src="images/jac.png" class="car-img"/><span class="car-name">江铃</span></p>
+          <p><img src="images/jeep.png" class="car-img"/><span class="car-name">吉普</span></p>
+          <p><img src="images/chang.png" class="car-img"/><span class="car-name">长安</span></p>
+        </div>
+        <div class="Car-list"><span class="city-letter" id="Z11">Z</span>
+          <p><img src="images/chang.png" class="car-img"/><span class="car-name">长安</span></p>
+          <p><img src="images/car_brands.png" class="car-img"/><span class="car-name">吉利</span></p>
+          <p><img src="images/jac.png" class="car-img"/><span class="car-name">江铃</span></p>
+          <p><img src="images/jeep.png" class="car-img"/><span class="car-name">吉普</span></p>
+          <p><img src="images/chang.png" class="car-img"/><span class="car-name">长安</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--selectCarBrands end-->
+<!--selectModelCar start-->
+<div class="selectModelCar ">
+  <div class="modelCar transition">
+    <!--  header start-->
+    <header class="header fixed">
+      <dl class="container">
+        <dt class="header-left">
+          <a class="aItem" href="javascript:;">
+            <i class="fi icon-jiantou_left" onclick="$('.selectModelCar').removeClass('on')"></i>
+          </a>
+        </dt>
+        <dd class="header-middle">
+          <h1 class="pageTitle">选择车型</h1>
+        </dd>
+        <dd class="header-right">
+          <a class="aItem" href="../search-c/pro-search.html">
+            <i class="fi fi-zoom"></i>
+          </a>
+        </dd>
+      </dl>
+    </header>
+    <!--  header start-->
+    <div class="modeCarWrapper">
+      <div class="hd">
+        <span><img src="images/modeCar.png" class="model-car"/></span>
+        <span class="brand-name">三菱</span>
+      </div>
+      <div class="brand-info">广汽三菱</div>
+      <div class="car-detail">
+        <div class="car-img">
+          <img src="images/car_01.jpg" class="img"/>
+        </div>
+        <div class="car-det-info">
+          <div class="theme">奥迪A3</div>
+          <div class="price">18.49~28.1万</div>
+        </div>
+      </div>
+      <div class="car-detail">
+        <div class="car-img">
+          <img src="images/car_01.jpg" class="img"/>
+        </div>
+        <div class="car-det-info">
+          <div class="theme">奥迪A3</div>
+          <div class="price">18.49~28.1万</div>
+        </div>
+      </div>
+      <div class="car-detail" style="">
+        <div class="car-img">
+          <img src="images/car_01.jpg" class="img"/>
+        </div>
+        <div class="car-det-info">
+          <div class="theme">奥迪A3</div>
+          <div class="price">18.49~28.1万</div>
+        </div>
+      </div>
+      <div class="brand-info">广汽三菱</div>
+      <div class="car-detail">
+        <div class="car-img">
+          <img src="images/car_01.jpg" class="img"/>
+        </div>
+        <div class="car-det-info">
+          <div class="theme">奥迪A3</div>
+          <div class="price">18.49~28.1万</div>
+        </div>
+      </div>
+      <div class="car-detail">
+        <div class="car-img">
+          <img src="images/car_01.jpg" class="img"/>
+        </div>
+        <div class="car-det-info">
+          <div class="theme">奥迪A3</div>
+          <div class="price">18.49~28.1万</div>
+        </div>
+      </div>
+      <div class="car-detail" style="">
+        <div class="car-img">
+          <img src="images/car_01.jpg" class="img"/>
+        </div>
+        <div class="car-det-info">
+          <div class="theme">奥迪A3</div>
+          <div class="price">18.49~28.1万</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--selectModelCar end-->
+<!--selectModelCar start-->
+<div class="selectCarSeries">
+  <div class="Series-left">
+    <div class="mask-icon">
+      <div class="icon-prop"><i class="fi icon-arrow-circle-o-right"></i></div>
+      <span class="prop">点</span>
+      <span class="prop">击</span>
+      <span class="prop">收</span>
+      <span class="prop">起</span>
+    </div>
+  </div>
+  <div class="Series-rigth">
+    <div class="CarSeries transition">
+      <div class="hd">
+         <span class="icon-left" onclick="$('.selectCarSeries').removeClass('on')">
+           <i class="fi icon-jiantou_left"></i>
+         </span>
+        <span>选择车款</span>
+      </div>
+      <div class="hd-brand">
+        <span><img src="images/qichen.png" class="model-car"/></span>
+        <span class="brand-name">启辰</span>
+      </div>
+      <div class="brand-info">东风启辰</div>
+      <div class="car-detail">
+        <div class="car-det-info">
+          <div class="theme">30周年纪念版 TFSI 进取型</div>
+          <div class="price">40.6万</div>
+        </div>
+      </div>
+      <div class="car-detail">
+        <div class="car-det-info">
+          <div class="theme">30周年纪念版 TFSI 进取型</div>
+          <div class="price">40.6万</div>
+        </div>
+      </div>
+      <div class="car-detail">
+        <div class="car-det-info">
+          <div class="theme">30周年纪念版 TFSI 进取型</div>
+          <div class="price">40.6万</div>
+        </div>
+      </div>
+      <div class="car-detail">
+        <div class="car-det-info">
+          <div class="theme">30周年纪念版 TFSI 进取型</div>
+          <div class="price">40.6万</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--selectModelCar end-->
+<!--citySelectComponent start-->
+<div class="citySelectComponent">
+  <div class="citySelect transition">
+    <!--  header start-->
+    <header class="header fixed">
+      <dl class="container">
+        <dt class="header-left">
+          <a class="aItem" href="javascript:;" onclick="$('.citySelectComponent').removeClass('on');">
+            <i class="fi icon-jiantou_left"></i>
+          </a>
+        </dt>
+        <dd class="header-middle">
+          <h1 class="pageTitle">选择城市</h1>
+        </dd>
+        <dd class="header-right">
+          <a class="aItem" href="../search-c/pro-search.html">
+            <i class="fi fi-zoom"></i>
+          </a>
+        </dd>
+      </dl>
+    </header>
+    <!--  header start-->
+    <!--cityWrpper start-->
+    <h3 class="city-theme">仅限热门城市广东省内</h3>
+    <div class="cityWrpper">
+      <ul class="items">
+        <li class="item">广州</li>
+        <li class="item">深圳</li>
+        <li class="item">东莞</li>
+        <li class="item">珠海</li>
+        <li class="item">佛山</li>
+        <li class="item">江门</li>
+        <li class="item">韶关</li>
+        <li class="item">汕头</li>
+        <li class="item">湛江</li>
+        <li class="item">肇庆</li>
+        <li class="item">惠州</li>
+        <li class="item">梅州</li>
+        <li class="item">云浮</li>
+        <li class="item">汕尾</li>
+        <li class="item">河源</li>
+        <li class="item">汕尾</li>
+        <li class="item">清远</li>
+        <li class="item">潮州</li>
+        <li class="item">阳江</li>
+        <li class="item">揭阳</li>
+      </ul>
+    </div>
+    <!--cityWrpper end-->
+  </div>
+</div>
+<!--citySelectComponent end-->
+<!--footer start-->
+<footer class="footer">
+  <div class="choose-bot on" id="choose-1">
+    <h3 class="title">
+      <span class="theme">选择购车城市与心仪车型</span>
+      <span class="progress"><em class="num">1</em>/6</span>
+    </h3>
+    <div class="form_modu">
+      <ul class="items">
+        <li class="item" id="selectCars">
+          <span class="i-icon"><i class="fi icon-chexing"></i></span>
+          <span class="info">心仪车型</span>
+          <span class="content"><em class="uf-f1" id="selectCarModel">请选择您心仪的车型</em></span>
+          <span class="more">
+            <i class="fi icon-icon"></i>
+          </span>
+        </li>
+        <li class="item" id="selectCity">
+          <span class="i-icon"><i class="fi icon-ditu"></i></span>
+          <span class="info">购车城市</span>
+          <span class="content"><em class="uf-f1" id="selectedCity">深圳</em></span>
+          <span class="more">
+            <i class="fi icon-icon"></i>
+          </span>
+        </li>
+      </ul>
+    </div>
+    <div class="ft-button">
+      <a href="#" class="btn-main btn-disabled" id="nextBtn">确定</a>
+    </div>
+  </div>
+  <div class="choose-bot" id="choose-2">
+    <h3 class="title">
+      <span class="theme">您的职业是？</span>
+      <span class="progress"><em class="num">2</em>/6</span>
+    </h3>
+    <div class="choose-area">
+      <a href="javascript:void(0);">公务员/事业单位</a>
+      <a href="javascript:void(0);">企业主</a>
+      <a href="javascript:void(0);">个体户</a>
+      <a href="javascript:void(0);">上班族</a>
+      <a href="javascript:void(0);">自由职业者</a>
+    </div>
+  </div>
+  <div class="choose-bot" id="choose-3">
+    <h3 class="title">
+      <span class="theme">您的信用记录如何？</span>
+      <span class="progress"><em class="num">3</em>/6</span>
+    </h3>
+    <div class="choose-area">
+      <a href="javascript:void(0);">信用良好</a>
+      <a href="javascript:void(0);">少数逾期</a>
+      <a href="javascript:void(0);">多次逾期</a>
+      <a href="javascript:void(0);">无信用记录</a>
+    </div>
+  </div>
+  <div class="choose-bot" id="choose-4">
+    <h3 class="title">
+      <span class="theme">您的住房状态是怎么样的呢？</span>
+      <span class="progress"><em class="num">4</em>/6</span>
+    </h3>
+    <div class="choose-area">
+      <a href="javascript:void(0);">自有全款</a>
+      <a href="javascript:void(0);">自有贷款</a>
+      <a href="javascript:void(0);">租赁</a>
+    </div>
+  </div>
+  <div class="choose-bot" id="choose-5">
+    <h3 class="title">
+      <span class="theme">那您有缴社保和公积金么？</span>
+      <span class="progress"><em class="num">5</em>/6</span>
+    </h3>
+    <div class="choose-area">
+      <div class="InsuranceDiv" id="social-security">
+        <span class="insur-title">社 保</span>
+        <a href="javascript:void(0);">有社保</a>
+        <a href="javascript:void(0);">无社保</a>
+      </div>
+      <div class="InsuranceDiv" id="no-soc-security">
+        <span class="insur-title">公积金</span>
+        <a href="javascript:void(0);">有公积金</a>
+        <a href="javascript:void(0);">无公积金</a>
+      </div>
+    </div>
+  </div>
+  <div class="choose-bot" id="choose-6">
+    <h3 class="title">
+      <span class="theme">麻烦选择一下您的月收入范围？</span>
+      <span class="progress"><em class="num">6</em>/6</span>
+    </h3>
+    <div class="choose-area price-area">
+      <a href="javascript:void(0);">20000元以上</a>
+      <a href="javascript:void(0);">12000-20000元</a>
+      <a href="javascript:void(0);">8000-12000元</a>
+      <a href="javascript:void(0);">5000-8000元</a>
+      <a href="javascript:void(0);">3000-5000元</a>
+      <a href="javascript:void(0);">3000元以下</a>
+    </div>
+  </div>
+  <div class="choose-bot" id="choose-7" >
+    <h3 class="title">
+      <span class="theme">正在配合您的金融产品</span>
+    </h3>
+    <div class="choose-area pro-complete">
+      <div class="prg-cont rad-prg" id="indicatorContainer4"></div>
+    </div>
+  </div>
+</footer>
+<!--footer end-->
+</body>
+</html>
+<script type="text/javascript" language="javascript" src="../common/js/jquery-1.7.2.min.js"></script>
+<script src="js/radialindicator.js"></script>
+<script>
+    $(function () {
+        var objArr = [];
+        var objSocial = [];
+        // 条件一
+        $('#nextBtn').on('click', function () {
+            var carName = $('#selectCarModel').html();
+            var buyCity = $('#selectedCity').html();
+            if(carName!='请选择您心仪的车型'){
+                $('#carPropName').html(carName);
+                $('#buyCarCity').html(buyCity);
+                // 添加品牌图片？？？？？？？？？？？
+                divHide('#choose-1', '#choose-2');
+                $('#buy-car-info').removeClass('on');
+                $("#buy-message").delay("1000").removeClass('on');
+            }else {
+                return false;
+            }
+        });
+
+        // 条件二
+        $('#choose-2 .choose-area a').on('click', function () {
+            var val = $(this).html();
+            $(this).addClass('a-on');
+            objArr.push(val);
+            txtHtml(val);
+            divHide('#choose-2', '#choose-3');
+        });
+
+        // 条件三
+        $('#choose-3 .choose-area a').on('click', function () {
+            var val = $(this).html();
+            $(this).addClass('a-on');
+            objArr.push(val);
+            txtHtml(val);
+            divHide('#choose-3', '#choose-4');
+        });
+
+        // 条件四
+        $('#choose-4 .choose-area a').on('click', function () {
+            var val = $(this).html();
+            $(this).addClass('a-on');
+            objArr.push(val);
+            txtHtml(val);
+            divHide('#choose-4', '#choose-5');
+        });
+
+        // 条件五  社保
+        $('#social-security a').on('click', function () {
+            var val = $(this).html();
+            $(this).addClass('a-on').siblings().removeClass('a-on');
+            objSocial.length = 0;
+            objSocial.push(val);
+            $(this).addClass('a-on');
+        });
+
+        // 条件五  公积金
+        $('#no-soc-security a').on('click', function () {
+            var val = $(this).html();
+            objSocial.push(val);
+            var objStr = objSocial.concat();
+            txtHtml(objStr);
+            $(this).addClass('a-on');
+            objArr.push(objSocial);
+            if (objSocial.length > 1) {
+                divHide('#choose-5', '#choose-6');
+            }
+        });
+
+        // 条件六 收入
+        $('#choose-6 .choose-area a').on('click', function () {
+            var val = $(this).html();
+            objArr.push(val);
+            txtHtml(val);
+            $('#choose-6').removeClass('on');
+            divHide('#choose-6', '#choose-7');
+            $('#indicatorContainer').radialIndicator({
+                barColor: {
+                    0: '#FF0000',
+                    33: '#FFFF00',
+                    66: '#33CC33',
+                    100: '#008af0'
+                },
+                percentage: true
+            });
+            var radialObj4 = $('#indicatorContainer4').radialIndicator({
+                barColor: {
+                    0: '#FF0000',
+                    33: '#FFFF00',
+                    66: '#33CC33',
+                    100: '#008af0'
+                },
+                percentage: true
+            }).data('radialIndicator');
+
+            radialObj4.animate(100);
+            setTimeout("window.location='login.html'", 1800);
+        });
+
+        function divHide(obj1, obj2) {
+            $(obj1).removeClass('on');
+            $(obj2).addClass('on');
+        }
+
+        function txtHtml(obj) {
+            var html = '<div class="response-wrapper"><div class="message-response"><div class="icon-img">' +
+                ' <img src="images/user.png" class="img"/></div><div class="message-prop">' + obj + '</div> </div></div>';
+            $(".chattingInner").append(html);
+            var box = document.getElementById('chattingWrap');
+            box.scrollTop = box.scrollHeight;
+        }
+
+        // 条件七 收入
+        /*----------------------------------------------------------*/
+
+        //点击收起
+        $('.selectCarSeries .Series-left').on('click', function () {
+            $('.selectCarSeries').removeClass('on');
+            $('.selectModelCar').removeClass('on');
+            $('.selectCarBrands').removeClass('on');
+        });
+        //请选择您心仪的车型品牌
+        $('#selectCars').on('click', function () {
+            $('.selectCarBrands').addClass('on');
+        });
+        //请选择您心仪的车型
+        $('.Car-list p').on('click', function () {
+            $('.selectModelCar').addClass('on');
+        });
+        //请选择您心仪的车型配置
+        $('.selectModelCar .car-detail').on('click', function () {
+            $('.selectCarSeries').addClass('on');
+        });
+
+        //选择车款
+        $('.selectCarSeries .car-detail').on('click', function () {
+            var objVal = $(this).find('.theme').html();
+            $('#selectCarModel').addClass('f-on').html(objVal);
+            $('.selectCarSeries').removeClass('on');
+            $('.selectModelCar').removeClass('on');
+            $('.selectCarBrands').removeClass('on');
+            $('#nextBtn').removeClass('btn-disabled');
+        });
+        //点击城市弹出城市效果
+        $('#selectCity').on('click', function () {
+            $('.citySelectComponent').addClass('on');
+        });
+        $('.citySelectComponent .cityWrpper .item').on('click', function () {
+            var cityValue = $(this).html();
+            $('.citySelectComponent').removeClass('on');
+            $('#selectedCity').addClass('f-on').html(cityValue);
+        });
+    })
+</script>
+
+
+
+
+
+
+
+
+
+
