@@ -79,6 +79,6 @@ gulp.task('serve', function() {
 
   gulp.watch('src/styles/*.less',['style']);
   gulp.watch('src/scripts/*.js',['script']);
-  gulp.watch('src/images/*.*',['image']);    
+  gulp.watch('src/images/*.*',['image']);     
   gulp.watch('src/*.html',['html']);
 });
